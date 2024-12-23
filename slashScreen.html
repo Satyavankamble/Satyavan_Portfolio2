@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satyavan Websites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #250821, #292e33);
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+            padding: 1rem; /* Add some padding for smaller screens */
+        }
+
+        /* Splash Container */
+        .splash-container {
+            text-align: center;
+            position: relative;
+            width: 100%; /* Make it responsive */
+            max-width: 600px; /* Limit max width */
+        }
+
+        /* Splash Text */
+        .splash-text {
+            font-size: 2.5rem; /* Base font size */
+            color: #87CEEB; /* Sky blue color */
+            font-weight: bold; /* Make text bold */
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            overflow: hidden;
+            display: inline-block;
+            animation: letterAnimation 8s steps(30, end), fadeOut 2s ease-in-out 8s forwards;
+            white-space: nowrap;
+            width: 100%; /* Ensure it takes full width */
+        }
+
+        /* Keyframes for Letter Animation */
+        @keyframes letterAnimation {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Fade-out Effect */
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        /* Responsive Font Sizes */
+        @media (max-width: 768px) {
+            .splash-text {
+                font-size: 2rem; /* Smaller font size for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .splash-text {
+                font-size: 1.5rem; /* Smaller font size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-container">
+        <div class="splash-text">Thank you for visiting Satyavan Websites!</div>
+    </div>
+
+    <!-- Redirect Script -->
+    <script>
+        // Show the splash screen for 10 seconds and then redirect to index.html
+        setTimeout(function () {
+            window.location.href = "index.html";
+        }, 10000);
+    </script>
+</body>
+</html>
